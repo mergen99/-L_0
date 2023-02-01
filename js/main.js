@@ -8,6 +8,7 @@ const chooseAllCheckbox = document.getElementById("choose-all");
 const checkboxesInActiveItems = document.querySelectorAll(".active");
 const openBasket = document.getElementById("openBasket");
 const chooseBasket = document.getElementById("basketChoose");
+const chooseBasketitem = document.querySelector(".basket__choose-icon");
 const labelAll = document.getElementById("labelAll");
 const counterBlocks = document.querySelectorAll(".basket__item");
 const totalNew = document.querySelectorAll("[data-counter]");
@@ -29,10 +30,12 @@ const oldCases = document.getElementById("oldCases");
 const oldPencils = document.getElementById("oldPencils");
 const fake = document.querySelector(".fake");
 const circleCount = document.querySelector(".header__right-circle");
+const totalThings = document.querySelector(".total__count_first");
 //payment
 const deliveryChangeBtn = document.getElementById("deliveryChangeBtn");
 const choosepayment = document.getElementById("choose-payment");
 //payment total
+const deliveryImg = document.querySelector(".delivery-total__header_img");
 const deliveryTotalChangeBtn = document.getElementById(
   "deliveryTotalChangeBtn"
 );
@@ -45,7 +48,7 @@ const closeChangeDelivery = document.getElementById('closeChangeDelivery');
 openChangeDelivery.addEventListener('click', openChangeDeliveryFunction);
 closeChangeDelivery.addEventListener('click', closeChangeDeliveryFunction);
 
-
+deliveryImg.addEventListener('click', openChangeDeliveryFunction)
 //change button text
 const deliveryTotalCheckbox = document.getElementById("deliveryTotalCheckbox");
 const orderButton = document.getElementById("orderButton");
@@ -63,7 +66,7 @@ closeModalPayment.addEventListener("click", openChangePaymentMethod);
 /* counterBlocks.forEach((element) =>
   element.addEventListener("click", getCountGoods)
 ); */
-
+outItems.addEventListener("click", toggleOutItems)
 const rowName = document.getElementById("rowName");
 const inputName = document.getElementById("inputName");
 const errorName = document.getElementById("errorName");
@@ -92,6 +95,7 @@ inputSurname.addEventListener("blur", checkInputSurname);
 inputPost.addEventListener("blur", checkInputPost);
 inputPhone.addEventListener("blur", checkInputPhone);
 inputInn.addEventListener("blur", checkInputInn);
+
 
 //listeners
 
@@ -178,6 +182,7 @@ counterBlocks.forEach((counter) => {
       getTotalOld();
       getDifference();
       getCountGoods();
+
     }
   });
 });
@@ -206,15 +211,13 @@ function getDifference() {
   diff.textContent = total - totalDiscount;
 }
 
-/* function toggleActiveItems() {
-  activeItems.classList.toggle("hide");
-  closeActiveItems.classList.toggle("rotate-icon");
-} */
 
-/* function toggleOutItems() {
-  outItems.classList.toggle("hide");
-  closeOutItems.classList.toggle("rotate-icon");
-} */
+
+function toggleOutItems() {
+  if (outItems.classList.contains("close")) {
+    console.log("1");
+  }
+}
 
 function changeChooseAll() {
   let listboolean = [];
@@ -235,6 +238,7 @@ function chooseAllItems() {
   checkboxesInActiveItems.forEach((item) => {
     if (chooseAllCheckbox.checked) {
       item.checked = true;
+      circleCount.textContent = 3;
     }
   });
 }
@@ -254,11 +258,12 @@ function closeChangeDeliveryFunction() {
 function changeBasket() {
   activeItems.classList.toggle("close");
   if (activeItems.classList.contains("close")) {
-    closeActiveItems.classList.remove("rotate-icon");
+    closeActiveItems.classList.add("rotate-icon");
     labelAll.style.display = "none";
     fake.style.display = "block";
+
   } else {
-    closeActiveItems.classList.add("rotate-icon");
+    closeActiveItems.classList.remove("rotate-icon");
     labelAll.style.display = "inline-flex";
     fake.style.display = "none";
   }
@@ -270,11 +275,18 @@ function getCountGoods() {
     arr.push(parseInt(amountGoods[i].textContent));
   }
   amount = arr.reduce((acc, num) => acc + num, 0);
-     fake.textContent = amount + " " + "товаров·" + basketCost.textContent;
+  fake.textContent = amount + " " + "товаров·" + basketCost.textContent;
+  totalThings.textContent = amount + " " + "товара";
 }
 
 function changeChooseBasket() {
   outItems.classList.toggle("close");
+  if (outItems.classList.contains("close")) {
+    closeOutItems.classList.add("rotate-icon");
+  }
+  else {
+    closeOutItems.classList.remove("rotate-icon");
+  }
 }
 
 //form functions
@@ -306,7 +318,7 @@ function checkInputPost() {
   const reg = /^([A-Za-z0-9_\-.])+@([A-Za-z0-9_\-.])+\.([A-Za-z]{2,4})$/;
   const isValid = reg.test(inputPost.value);
 
-  if (!isValid) {
+  if (inputPost.value && !isValid) {
     rowPost.classList.add("error");
     errorPost.classList.add("common__error");
     errorPost.innerText = "Проверьте адрес электронной почты";
@@ -320,7 +332,7 @@ function checkInputPhone() {
   const reg = /\+7\ \d{3}\ \d{3}\ \d{2}\ \d{2}/;
   const isValid = reg.test(inputPhone.value);
 
-  if (!isValid) {
+  if (inputPhone.value && !isValid) {
     rowPhone.classList.add("error");
     errorPhone.classList.add("common__error");
     errorPhone.innerText = "Формат: +9 999 999 99 99";

@@ -20,7 +20,10 @@
             <div class="header__left-catalog">
               <span></span>
             </div>
-            <div class="header__left-text">ТОВАРЫ И ТОЧКА</div>
+            <div class="header__left-text">
+              <span class="header__left-text_one">ТОВАРЫ</span>
+              <span class="header__left-text_two">И ТОЧКА</span>
+            </div>
           </div>
           <div class="header__search">
             <input
@@ -31,12 +34,20 @@
           </div>
           <div class="header__right">
             <div class="header__right-profile">
-              <img src="./images/icons/icon-profile.svg" alt="icon profile" />
+              <img
+                src="./images/icons/icon-profile.svg"
+                alt="icon profile"
+                class="header__right-profile_icon"
+              />
               <p class="header__right-text">Профиль</p>
             </div>
             <div class="header__right-basket">
-              <img src="./images/icons/icon-basket.svg" alt="icon basket" />
-              <p class="header__right-text">Корзина</p>
+              <img
+                src="./images/icons/icon-basket.svg"
+                alt="icon basket"
+                class="header__right-profile_icon"
+              />
+              <p class="header__right-text header__right-text_shift">Корзина</p>
               <div class="header__right-circle">0</div>
             </div>
           </div>
@@ -64,8 +75,10 @@
                     type="checkbox"
                     id="choose-all"
                   />
-                  <label for="choose-all" id="labelAll">Выбрать всё</label>
-                  <div class="fake">4 товаров·1370 сом</div>
+                  <label for="choose-all" id="labelAll"
+                    ><span class="basket__choose_all">Выбрать всё</span></label
+                  >
+                  <div class="fake">3 товаров·1370 сом</div>
                   <img
                     id="closeActiveItems"
                     class="basket__choose-icon"
@@ -100,7 +113,9 @@
                             1051 сом
                           </p>
                         </div>
-                        <p class="item__info-name">Футболка UZcotton мужская</p>
+                        <p class="item__info-name item__info-name_first">
+                          Футболка UZcotton мужская
+                        </p>
                         <div class="item__info-options option">
                           <p class="option__color">Цвет: белый</p>
                           <p class="option__size">Размер: 56</p>
@@ -135,7 +150,9 @@
                         <p class="item__counter-block_count">1</p>
                         <span class="item__counter-block_increase">+</span>
                       </div>
-                      <div class="item__counter-count">Осталось 2 шт.</div>
+                      <div class="item__counter-count item__counter-count_one">
+                        Осталось 2 шт.
+                      </div>
                       <div class="item__counter-buttons button">
                         <span class="button__favorite">
                           <img
@@ -157,7 +174,8 @@
                         id="newTshort"
                         data-counter
                       >
-                        522 сом
+                        <span class="item__cost__new-cost_value">522</span>
+                        <span class="item__cost__new-cost_currency">сом</span>
                       </p>
                       <p
                         class="item__cost__old-cost"
@@ -185,10 +203,13 @@
                           alt="item image two"
                         />
                       </div>
-                      <div class="item__info-description">
+                      <div
+                        class="item__info-description item__info-description_two"
+                      >
                         <div class="item__cost_mobile">
                           <p class="item__cost__new-cost item__cost-small">
-                            2 100 047 сом
+                            <span>2 100 047</span>
+                            <span>сом</span>
                           </p>
                           <p class="item__cost__old-cost mobile__old-cost">
                             2 300 047 сом
@@ -203,7 +224,9 @@
                           <p class="option__size hide">Размер: 56</p>
                         </div>
                         <div class="item__info-address address">
-                          <p class="address__top">Коледино WB</p>
+                          <p class="address__top address__top_name">
+                            Коледино WB
+                          </p>
                           <div class="address__bottom">
                             <p class="address__bottom-text">
                               OOO Мегапрофстиль
@@ -228,7 +251,7 @@
                         </div>
                       </div>
                     </div>
-                    <div class="item__counter">
+                    <div class="item__counter item__counter_two">
                       <div class="item__counter-block cnt2">
                         <span class="item__counter-block_decrease">–</span>
                         <p class="item__counter-block_count">1</p>
@@ -258,7 +281,8 @@
                         id="newCases"
                         data-counter
                       >
-                        354 сом
+                        <span class="item__cost__new-cost_value">354</span>
+                        <span class="item__cost__new-cost_currency">сом</span>
                       </p>
                       <p
                         class="item__cost__old-cost"
@@ -286,8 +310,10 @@
                           alt="item image three"
                         />
                       </div>
-                      <div class="item__info-description">
-                        <div class="item__cost_mobile">
+                      <div
+                        class="item__info-description item__info-description_third"
+                      >
+                        <div class="item__cost_mobile mobile_third">
                           <p
                             class="item__cost__new-cost item__cost-small"
                             data-counter
@@ -298,16 +324,19 @@
                             950 сом
                           </p>
                         </div>
-                        <p class="item__info-name">
+                        <p class="item__info-name item__info-name_third">
                           Карандаши цветные Faber-Castell "Замок", набор 24
-                          цвета, заточенные, шестигранные, Faber-Castell
+                          цвета, заточенные, шестигранные,<br />
+                          Faber-Castell
                         </p>
                         <div class="item__info-options option hide">
                           <p class="option__color">Цвет: прозрачный</p>
                           <p class="option__size">Размер: 56</p>
                         </div>
                         <div class="item__info-address address">
-                          <p class="address__top">Коледино WB</p>
+                          <p class="address__top addres__top_third">
+                            Коледино WB
+                          </p>
                           <div class="address__bottom">
                             <p class="address__bottom-text">OOO Вайлдберриз</p>
                             <img
@@ -330,14 +359,20 @@
                         </div>
                       </div>
                     </div>
-                    <div class="item__counter">
+                    <div class="item__counter item__counter_third">
                       <div class="item__counter-block cnt3">
                         <span class="item__counter-block_decrease">–</span>
                         <p class="item__counter-block_count">1</p>
                         <span class="item__counter-block_increase">+</span>
                       </div>
-                      <div class="item__counter-count">Осталось 2 шт.</div>
-                      <div class="item__counter-buttons button">
+                      <div
+                        class="item__counter-count item__counter-count_third"
+                      >
+                        Осталось 2 шт.
+                      </div>
+                      <div
+                        class="item__counter-buttons item__counter-buttons_third button"
+                      >
                         <span class="button__favorite">
                           <img
                             src="./images/icons/icon-favorite.svg"
@@ -354,7 +389,8 @@
                     </div>
                     <div class="item__cost">
                       <p class="item__cost__new-cost" id="newPencils">
-                        494 сом
+                        <span class="item__cost__new-cost_value">494</span>
+                        <span class="item__cost__new-cost_currency">сом</span>
                       </p>
                       <p
                         class="item__cost__old-cost"
@@ -389,7 +425,7 @@
                           alt="item image one"
                         />
                       </div>
-                      <div class="item__info-description">
+                      <div class="item__info-description first">
                         <p class="item__info-name">Футболка UZcotton мужская</p>
                         <div class="item__info-options option">
                           <p class="option__color">Цвет: белый</p>
@@ -397,8 +433,8 @@
                         </div>
                       </div>
                     </div>
-                    <div class="item__counter counter-out">
-                      <div class="item__counter-buttons button">
+                    <div class="item__counter item__counter_first counter-out">
+                      <div class="item__counter-buttons button one">
                         <span class="button__favorite">
                           <img
                             src="./images/icons/icon-favorite.svg"
@@ -425,7 +461,7 @@
                         />
                       </div>
                       <div class="item__info-description description-out">
-                        <p class="item__info-name">
+                        <p class="item__info-name second">
                           Силиконовый чехол картхолдер (отверстия) для карт,
                           прозрачный кейс бампер на Apple iPhone XR, MobiSafe
                         </p>
@@ -435,8 +471,8 @@
                         </div>
                       </div>
                     </div>
-                    <div class="item__counter counter-out">
-                      <div class="item__counter-buttons button">
+                    <div class="item__counter item__counter_first counter-out">
+                      <div class="item__counter-buttons button two">
                         <span class="button__favorite">
                           <img
                             src="./images/icons/icon-favorite.svg"
@@ -453,7 +489,7 @@
                     </div>
                   </div>
                   <!--                item 3 out-->
-                  <div class="basket__item item-out">
+                  <div class="basket__item basket__item_third item-outs">
                     <div class="item__info">
                       <div class="item__info-image">
                         <img
@@ -463,7 +499,7 @@
                         />
                       </div>
                       <div class="item__info-description description-out">
-                        <p class="item__info-name">
+                        <p class="item__info-name third">
                           Карандаши цветные Faber-Castell "Замок", набор 24
                           цвета, заточенные, шестигранные, Faber-Castell
                         </p>
@@ -474,7 +510,7 @@
                       </div>
                     </div>
                     <div class="item__counter counter-out">
-                      <div class="item__counter-buttons button">
+                      <div class="item__counter-buttons button three">
                         <span class="button__favorite">
                           <img
                             src="./images/icons/icon-favorite.svg"
@@ -496,57 +532,85 @@
               <div class="basket__content-delivery delivery">
                 <div class="delivery__header">
                   <p class="delivery__header-text">Способ доставки</p>
-                  <button id="openChangeDelivery" class="delivery__header-btn">Изменить</button>
+                  <button id="openChangeDelivery" class="delivery__header-btn">
+                    Изменить
+                  </button>
                 </div>
                 <div class="delivery__content">
                   <div class="delivery__content-point">
-                    <p class="caption">Пункт выдачи</p>
+                    <p class="caption caption__point">Пункт выдачи</p>
                     <p class="description">
-                      Бишкек, улица Ахматбека Суюмбаева, 12/1
+                      Бишкек, улица
+                      <span class="description_street"
+                        >Ахматбека Суюмбаева, 12/1</span
+                      >
                       <span class="description__span">
                         <img
                           class="description__star"
                           src="./images/icons/icon-star.svg"
                           alt="icon star"
+                          width="15px"
+                          height="15px"
                         />
-                        4.99 Ежедневно с 10 до 21
+                        <span class="description__span_name"
+                          >4.99
+                          <span class="description__span_schedule"
+                            >Ежедневно с 10 до 21</span
+                          ></span
+                        >
                       </span>
                     </p>
                   </div>
-                  <div class="delivery__content-point">
+                  <div
+                    class="delivery__content-point delivery__content-point_two"
+                  >
                     <p class="caption">Стоимость доставки</p>
-                    <p class="description">Бесплатно</p>
+                    <p class="description price">Бесплатно</p>
                   </div>
-                  <div class="delivery__content-point">
+                  <div
+                    class="delivery__content-point delivery__content-point_three"
+                  >
                     <p class="caption">5—6 февраля</p>
                     <div class="delivery__icons">
                       <img
                         src="./images/itemsImages/item-image-1.svg"
                         alt="image one"
+                        width="40px"
+                        height="56px"
                       />
                       <img
                         src="./images/itemsImages/item-image-2.svg"
                         alt="image three"
+                        width="40px"
+                        height="56px"
                       />
                       <img
                         src="./images/itemsImages/item-image-3.svg"
                         alt="image two"
+                        width="40px"
+                        height="56px"
                       />
                     </div>
                   </div>
-                  <div class="delivery__content-point">
-                    <p class="caption">7-8 февраля</p>
+                  <div
+                    class="delivery__content-point delivery__content-point_four"
+                  >
+                    <p class="caption">7—8 февраля</p>
                     <div class="delivery__icons">
                       <img
                         src="./images/itemsImages/item-image-2.svg"
                         alt="image two"
+                        width="40px"
+                        height="56px"
                       />
                     </div>
                   </div>
                   <div class="delivery__content-note note">
                     <img src="./images/icons/icon-check.svg" alt="icon check" />
                     <p class="note__text">
-                      Обратная доставка товаров на склад при отказе —
+                      Обратная доставка товаров на склад
+                      <br class="note__text_refusal" />
+                      при отказе —
                       <span>бесплатно</span>
                     </p>
                     <p class="note__info">
@@ -588,7 +652,11 @@
                         <p id="errorName" class="common__info">Укажите имя</p>
                       </div>
                       <div id="rowSurname" class="first_row-surname common">
-                        <input id="inputSurname" type="text" required="required" />
+                        <input
+                          id="inputSurname"
+                          type="text"
+                          required="required"
+                        />
                         <span class="common__placeholder">Фамилия</span>
                         <p id="errorSurname" class="common__info">
                           Укажите фамилию
@@ -636,7 +704,7 @@
               </div>
               <div class="basket__total-total total">
                 <div class="total__count">
-                  <p>4 товара</p>
+                  <p class="total__count_first">3 товара</p>
                   <p class="basket__total-discount">2316 сом</p>
                 </div>
                 <div class="total__count">
@@ -651,8 +719,14 @@
               <!--            total delivery-->
               <div class="basket__total-delivery delivery-total">
                 <div class="delivery-total__header">
-                  <p>Доставка в пункт выдачи</p>
-                  <img src="./images/icons/icon-edit.svg" alt="icon edit" />
+                  <p class="delivery-total__header_name">
+                    Доставка в пункт выдачи
+                  </p>
+                  <img
+                    src="./images/icons/icon-edit.svg"
+                    alt="icon edit"
+                    class="delivery-total__header_img"
+                  />
                 </div>
                 <p class="delivery-total__subheader">
                   Бишкек, улица Ахматбека Суюмбаева, 12/1
@@ -661,11 +735,12 @@
                 <div class="delivery-total-note total-note">
                   <img src="./images/icons/icon-check.svg" alt="icon check" />
                   <p class="note__text">
-                    Обратная доставка товаров на склад при отказе —
+                    Обратная доставка товаров<br class="note__text_line" />
+                    на склад при отказе —
                     <span>бесплатно</span>
                   </p>
                   <p class="note__info delivery__info">
-                    Если товары вам не подойдут, мы вернем их обратно на склад —
+                    Если товары вам не подойдут, мы вернем их обратнона склад —
                     это бесплатно
                   </p>
                 </div>
@@ -678,7 +753,11 @@
                     src="./images/icons/icon-payment.svg"
                     alt="icon payment"
                   />
-                  <p class="payment__content-numbers">1234 56•• •••• 1234</p>
+                  <p
+                    class="payment__content-numbers payment__content-numbers_card"
+                  >
+                    1234 56•• •••• 1234
+                  </p>
                 </div>
                 <div class="delivery-total__write-off">
                   <input
@@ -687,7 +766,9 @@
                     id="choose-payment"
                   />
                   <label id="deliveryTotalCheckbox" for="choose-payment"
-                    >Списать оплату сразу</label
+                    ><span class="delivery-total__write-off_name"
+                      >Списать оплату сразу</span
+                    ></label
                   >
                   <p>Спишем оплату с карты при получении</p>
                 </div>
@@ -695,13 +776,16 @@
                   Заказать
                 </button>
                 <div class="delivery-total__agree">
-                  <input
-                    class="custom-checkbox agree-checkbox"
-                    type="checkbox"
-                    id="choose-agree"
+                  <img
+                    src="data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='000000' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e"
+                    alt=""
+                    width="12.51px"
+                    height="10.16px"
+                    class="delivery-total__agree_jackdaw"
                   />
                   <label for="choose-agree" class="agree"
-                    >Соглашаюсь с правилами пользования торговой площадкой и
+                    >Соглашаюсь с правилами <br class="agree__name" />
+                    пользования торговой площадкой <br class="agree__name" />и
                     возврата</label
                   >
                 </div>
@@ -723,23 +807,27 @@
           </div>
           <div class="modal__content">
             <div class="modal__content-row">
-              <input type="radio" />
+              <input type="radio" id="test1" name="radio-group" checked />
+              <label for="test1"></label>
               <img src="./images/icons/icon-payment.svg" alt="icon payment" />
               <p>1234 56•• •••• 1234</p>
             </div>
             <div class="modal__content-row">
-              <input type="radio" />
-              <img src="./images/icons/icon-payment.svg" alt="icon payment" />
+              <input type="radio" id="test2" name="radio-group" />
+              <label for="test2"></label>
+              <img src="./images/icons/visa.svg" alt="icon payment" />
               <p>1234 56•• •••• 1234</p>
             </div>
             <div class="modal__content-row">
-              <input type="radio" />
-              <img src="./images/icons/icon-payment.svg" alt="icon payment" />
+              <input type="radio" id="test3" name="radio-group" />
+              <label for="test3"></label>
+              <img src="./images/icons/mastercard.svg" alt="icon payment" />
               <p>1234 56•• •••• 1234</p>
             </div>
             <div class="modal__content-row">
-              <input type="radio" />
-              <img src="./images/icons/icon-payment.svg" alt="icon payment" />
+              <input type="radio" id="test4" name="radio-group" />
+              <label for="test4"></label>
+              <img src="./images/icons/maestro.svg" alt="icon payment" />
               <p>1234 56•• •••• 1234</p>
             </div>
             <button class="delivery-total__order modal-btn_payment">
@@ -748,7 +836,7 @@
           </div>
         </div>
       </div>
-<!--      modal delivery change-->
+      <!--      modal delivery change-->
       <div class="modal-method" id="delivery">
         <div class="modal-method__inner modal">
           <div class="modal__header">
@@ -761,9 +849,43 @@
           </div>
           <div class="modal__content">
             <div class="modal__content-row">
-              <input type="radio" />
-              <img src="./images/icons/icon-payment.svg" alt="icon payment" />
-              <p>1234 56•• •••• 1234</p>
+              <div class="modal__content-row_delivery">В пункт выдачи</div>
+              <div class="modal__content-row_delivery">Курьером</div>
+            </div>
+            <div class="modal__content-row">Мои Адреса</div>
+            <div class="modal__content-row">
+              <input type="radio" id="test5" name="radio-group" checked />
+              <label for="test5"></label>
+              <p class="modal__content_name">Бишкек, улица Табышалиева, 57</p>
+              <img
+                src="./images/icons/icon-delete.svg"
+                alt=""
+                class="modal__content_delete"
+              />
+            </div>
+            <div class="modal__content-row">
+              <input type="radio" id="test6" name="radio-group" />
+              <label for="test6"></label>
+              <p class="modal__content_name">
+                Бишкек, улица Жукеева-Пудовкина, 77/1
+              </p>
+              <img
+                src="./images/icons/icon-delete.svg"
+                alt=""
+                class="modal__content_delete"
+              />
+            </div>
+            <div class="modal__content-row">
+              <input type="radio" id="test7" name="radio-group" />
+              <label for="test7"></label>
+              <p class="modal__content_name">
+                Бишкек, микрорайон Джал, улица Ахунбаева Исы, 67/1
+              </p>
+              <img
+                src="./images/icons/icon-delete.svg"
+                alt=""
+                class="modal__content_delete"
+              />
             </div>
             <button class="delivery-total__order modal-btn_payment">
               Выбрать
@@ -771,7 +893,6 @@
           </div>
         </div>
       </div>
-
     </main>
 
     <footer>
